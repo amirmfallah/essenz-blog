@@ -8,7 +8,7 @@ import Image from "next/image";
 import { urlForImage } from "@/lib/sanity/image";
 import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { myLoader } from "@/utils/all";
+import ThemeSwitch from "./themeSwitch";
 
 export default function Navbar(props) {
   const leftmenu = [
@@ -30,17 +30,6 @@ export default function Navbar(props) {
     {
       label: "Archive",
       href: "/archive"
-    },
-    {
-      label: "Pro Version",
-      href: "https://stablo-pro.web3templates.com/",
-      external: true,
-      badge: "new"
-    },
-    {
-      label: "Download",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
     }
   ];
 
@@ -86,7 +75,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        Essenz
                       </span>
                     )}
                   </Link>
@@ -100,7 +89,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        Essenz
                       </span>
                     )}
                   </Link>
@@ -154,6 +143,7 @@ export default function Navbar(props) {
                       )}
                     </Fragment>
                   ))}
+                  <ThemeSwitch />
                 </div>
               </div>
               <Disclosure.Panel>

@@ -10,16 +10,14 @@ async function sharedMetaData(params) {
     // enable this for resolving opengraph image
     // metadataBase: new URL(settings.url),
     title: {
-      default:
-        settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
-      template: "%s | Stablo"
+      default: settings?.title || "Essenz Blog",
+      template: "%s | Essenz Blog"
     },
     description:
       settings?.description ||
-      "Stablo - popular open-source next.js and sanity blog template",
-    keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+      "Essenz blog - Art, literature, and culture",
+    keywords: settings?.keywords || "art, literature, culture",
+    authors: [{ name: "Azita Moussavi" }],
     canonical: settings?.url,
     openGraph: {
       images: [
@@ -33,7 +31,7 @@ async function sharedMetaData(params) {
       ]
     },
     twitter: {
-      title: settings?.title || "Stablo Template",
+      title: settings?.title || "Essenz Blog",
       card: "summary_large_image"
     },
     robots: {
